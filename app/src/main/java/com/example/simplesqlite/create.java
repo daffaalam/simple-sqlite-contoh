@@ -23,7 +23,7 @@ public class create extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
 
-//        databaseHandler = new database_handler(this);
+        databaseHandler = new database_handler(this);
 
         //Ekstaksi EditText dan Button
         nama = (EditText) findViewById(R.id.nama);
@@ -48,6 +48,8 @@ public class create extends AppCompatActivity {
                     kelas.setText("");
                     Toast.makeText(create.this, "Data berhasil dimasukan", Toast.LENGTH_SHORT).show();
 
+                    databaseHandler.createData(new data_siswa(null, snama, skelas));
+
                     AlertDialog.Builder builder = new AlertDialog.Builder(create.this);
                     builder
                             .setTitle("Notification")
@@ -58,10 +60,9 @@ public class create extends AppCompatActivity {
                                     startActivity(new Intent(create.this, read.class));
                                 }
                             })
-                            .setNegativeButton("Kembail ke Beranda", new DialogInterface.OnClickListener() {
+                            .setNegativeButton("tambah baru", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    startActivity(new Intent(create.this, main.class));
                                 }
                             });
                     builder.create().show();

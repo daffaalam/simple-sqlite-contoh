@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context="com.example.simplesqlite.update_delete">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Update and Delete your data" />
+
+    <EditText
+        android:id="@+id/nama_layx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama" />
+
+    <EditText
+        android:id="@+id/kelas_layx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kelas" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="update data" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete data" />
+
+</LinearLayout>

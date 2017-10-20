@@ -94,7 +94,7 @@ public class database_handler extends SQLiteOpenHelper {
         values.put(siswa_class, getData.getKelas_siswa());
 
         //Looping
-        return database.update(table_siswa, values, siswa_id + " = ? ", new String[]{
+        return database.update(table_siswa, values, siswa_id + " = ?", new String[]{
                 String.valueOf(getData.getId_siswa())
         });
     }
@@ -105,7 +105,7 @@ public class database_handler extends SQLiteOpenHelper {
         //Deklarasikan SQLiteDatabase
         SQLiteDatabase database = this.getWritableDatabase();
 
-        database.delete(table_siswa, siswa_id + " = ? ", new String[]{
+        database.delete(table_siswa, siswa_id + " = ?", new String[]{
                 String.valueOf(getData.getId_siswa())
         });
         database.close();
